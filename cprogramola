@@ -1,0 +1,37 @@
+#include<stdio.h>
+int Charges(int vehicle,int distance){
+
+int charge[]={10*distance,13*distance ,19*distance,22*distance,30*distance};
+return charge[vehicle];
+}
+
+int main(){
+label   : printf(" \n    \n ");
+int source,destination,vehicle;
+
+int Distance_array[4][4] = {{0,2,3,4,5},{2,0,6,7,8},{3,6,0,9,10},{4,7,9,0,11},{5,8,10,11,0}};
+
+printf("Enter your Location \n 0.SBU \n 1.PADUR \n 2.THAMBARAM \n 3.CMBT \n 4.CENTRAL \n");
+scanf("%d",&source);
+
+printf("Enter your Destination \n 0.SBU \n 1.PADUR \n 2.THAMBARAM \n 3.CMBT \n 4.CENTRAL \n");
+scanf("%d", &destination);
+
+int distance = Distance_array[source][destination];
+printf("the distance is %d kms \n ", distance);
+
+if(distance==0){
+    printf(" Plz Enter Exact Location \n ");
+    goto label;
+}
+else{
+
+    printf(" Enter Your Vehicle \n 0.Mini 10rs per 1k \n 1.Micro 13rs per 1k  \n 2.Macro 19rs per 1k \n 3.Suv 22rs per 1k  \n 4.Luxury 30rs per 1k \n");
+    scanf("%d",&vehicle);
+    printf(" \nCharges %d " ,charges(vehicle,distance) );
+
+
+
+}
+
+return 0;}
